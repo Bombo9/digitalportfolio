@@ -101,7 +101,7 @@ def show_home():
         st.metric("Freelance Projects", "100+", "Completed")
         
     with col3:
-        st.metric("Current Status", "Available", "For new projects")
+        st.metric("Current Status", "Available", "Open to opportunities")
     
     # Quick links
     st.subheader("Quick Navigation")
@@ -173,6 +173,16 @@ def show_about():
         for attr in attributes:
             st.write(attr)
             
+        st.subheader("Current Status")
+        st.success("""
+        🎯 Actively seeking opportunities for:
+        • Remote data science positions
+        • Industrial attachment programs
+        • Internship opportunities
+        • Freelance data projects
+        • Full-time employment
+        """)
+        
         st.subheader("Philosophy")
         st.info("""
         "Committed to continuous learning, innovation, and delivering high-impact, 
@@ -595,8 +605,9 @@ def show_contact():
     with col1:
         st.subheader("Let's Connect!")
         st.write("""
-        I'm always excited to discuss data science opportunities, collaborate on interesting projects, 
-        or simply connect with fellow data enthusiasts. Feel free to reach out!
+        I'm actively seeking opportunities for remote work, industrial attachments, internships, 
+        freelancing projects, and full-time employment in data science. I'm always excited to discuss 
+        new opportunities and collaborate on interesting projects. Feel free to reach out!
         """)
         
         # Contact form
@@ -606,10 +617,12 @@ def show_contact():
             name = st.text_input("Your Name")
             email = st.text_input("Your Email")
             subject = st.selectbox("Subject", [
-                "Project Inquiry",
-                "Collaboration Opportunity", 
-                "General Question",
-                "Freelance Work",
+                "Job Opportunity",
+                "Internship/Industrial Attachment",
+                "Freelance Project",
+                "Remote Work Opportunity",
+                "Collaboration Proposal",
+                "General Inquiry",
                 "Other"
             ])
             message = st.text_area("Your Message", height=150)
@@ -656,10 +669,14 @@ def show_contact():
         st.write("• [LinkedIn](https://linkedin.com/in/festusbombo)")
         st.write("• [GitHub](https://github.com/Bombo9)")
         
-        st.write("**🌍 Location:**")
-        st.write("Available for remote work worldwide")
+        st.write("**🌍 Availability:**")
+        st.write("• Remote work worldwide")
+        st.write("• Industrial attachment opportunities")
+        st.write("• Internship positions")
+        st.write("• Freelancing projects")
+        st.write("• Full-time employment")
         
-        st.write("**⏰ Availability:**")
+        st.write("**⏰ Working Hours:**")
         st.write("• Monday - Friday: 9 AM - 6 PM (EAT)")
         st.write("• Response Time: Within 24 hours")
         st.write("• Time Zone: East Africa Time (UTC+3)")
@@ -671,30 +688,33 @@ def show_contact():
         st.metric("Projects Completed", "125+", "Growing")
     
     # Services offered
-    st.subheader("Services I Offer")
+    st.subheader("Services & Opportunities")
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.write("**Data Analysis**")
+        st.write("**Data Science Services**")
         st.write("• Exploratory Data Analysis")
         st.write("• Statistical Modeling") 
         st.write("• Business Intelligence")
         st.write("• Performance Analytics")
+        st.write("• Machine Learning Solutions")
     
     with col2:
-        st.write("**Machine Learning**")
-        st.write("• Predictive Modeling")
-        st.write("• Classification Models")
-        st.write("• Regression Analysis")
-        st.write("• Clustering Solutions")
+        st.write("**Work Opportunities**")
+        st.write("• Remote Data Science Roles")
+        st.write("• Industrial Attachments")
+        st.write("• Internship Programs")
+        st.write("• Freelance Projects")
+        st.write("• Full-time Positions")
     
     with col3:
-        st.write("**Visualization**")
+        st.write("**Specializations**")
+        st.write("• Predictive Analytics")
+        st.write("• Data Visualization")
+        st.write("• Business Intelligence")
+        st.write("• Statistical Analysis")
         st.write("• Dashboard Development")
-        st.write("• Interactive Charts")
-        st.write("• Business Reports")
-        st.write("• Data Storytelling")
 
 if __name__ == "__main__":
     main()
