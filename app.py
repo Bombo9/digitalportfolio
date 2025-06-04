@@ -36,11 +36,17 @@ def main():
         # Try to load profile picture
         try:
             profile_img = Image.open("assets/profile_picture.jpg")
-            # Resize image to reasonable size
-            profile_img = profile_img.resize((300, 300))
-            st.image(profile_img, width=300)
+            # Resize image to reasonable size while maintaining aspect ratio
+            profile_img = profile_img.resize((300, 300), Image.LANCZOS)
+            st.image(profile_img, width=300, caption="Festus Matsitsa Bombo")
         except FileNotFoundError:
-            st.info("Profile picture not found. Please upload your profile picture to assets/profile_picture.jpg")
+            # Fallback display for deployment without image
+            st.markdown("""
+            <div style='text-align: center; padding: 20px; border: 2px dashed #ccc; border-radius: 10px;'>
+                <h3>👤 Festus Matsitsa Bombo</h3>
+                <p>Profile picture will be displayed here</p>
+            </div>
+            """, unsafe_allow_html=True)
     
     # Main title and subtitle
     st.markdown("<h1 style='text-align: center;'>FESTUS MATSITSA BOMBO</h1>", unsafe_allow_html=True)
@@ -56,10 +62,11 @@ def main():
                     label="📄 Download Resume (PDF)",
                     data=pdf_bytes,
                     file_name="Festus_Bombo_Resume.pdf",
-                    mime="application/pdf"
+                    mime="application/pdf",
+                    use_container_width=True
                 )
         except FileNotFoundError:
-            st.info("Resume PDF not found. Please upload your resume to assets/resume.pdf")
+            st.info("📄 Resume download will be available when PDF is uploaded to assets/resume.pdf")
     
     st.markdown("---")
     

@@ -1,8 +1,9 @@
 [project]
-name = "repl-nix-workspace"
-version = "0.1.0"
-description = "Add your description here"
+name = "festus-portfolio"
+version = "1.0.0"
+description = "Professional Data Scientist Portfolio built with Streamlit"
 requires-python = ">=3.11"
 dependencies = [
     "streamlit>=1.45.1",
+    "Pillow>=9.0.0",
 ]
