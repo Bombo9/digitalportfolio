@@ -37,7 +37,7 @@ def main():
         try:
             profile_img = Image.open("assets/profile_picture.jpg")
             # Resize image to reasonable size while maintaining aspect ratio
-            profile_img = profile_img.resize((300, 300), Image.LANCZOS)
+            profile_img = profile_img.resize((300, 300), Image.Resampling.LANCZOS)
             st.image(profile_img, width=300, caption="Festus Matsitsa Bombo")
         except FileNotFoundError:
             # Fallback display for deployment without image
