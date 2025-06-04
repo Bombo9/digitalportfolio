@@ -1,9 +1,9 @@
 [project]
-name = "festus-portfolio"
+name = "festus-bombo-portfolio"
 version = "1.0.0"
 description = "Professional Data Scientist Portfolio built with Streamlit"
 requires-python = ">=3.11"
 dependencies = [
-    "streamlit>=1.45.1",
-    "Pillow>=9.0.0",
+    "streamlit>=1.28.0",
+    "pillow>=9.0.0",
 ]
