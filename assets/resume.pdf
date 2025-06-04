@@ -1,0 +1,7 @@
+# This file represents the uploaded resume PDF
+# In a real deployment, you would copy the actual "My Resume.pdf" file
+# to this location. For now, this serves as a placeholder to indicate where the file should be placed.
+#
+# To use your actual resume:
+# 1. Save your PDF file as "resume.pdf" in the assets folder  
+# 2. The Streamlit app will automatically enable the download functionality
