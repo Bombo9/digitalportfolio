@@ -105,22 +105,21 @@ def show_home():
     
     # Quick links
     st.subheader("Quick Navigation")
+    st.write("Use the sidebar navigation to explore different sections of my portfolio:")
+    
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("View My Skills 🛠️", use_container_width=True):
-            st.session_state.selected_section = "🛠️ Skills"
-            st.rerun()
+        st.markdown("**🛠️ Skills Section**")
+        st.write("View my technical skills and expertise in data science tools and technologies.")
     
     with col2:
-        if st.button("See My Experience 💼", use_container_width=True):
-            st.session_state.selected_section = "💼 Experience"
-            st.rerun()
+        st.markdown("**💼 Experience Section**")
+        st.write("Explore my professional experience and freelance work history.")
     
     with col3:
-        if st.button("Contact Me 📞", use_container_width=True):
-            st.session_state.selected_section = "📞 Contact"
-            st.rerun()
+        st.markdown("**📞 Contact Section**")
+        st.write("Get in touch for job opportunities, internships, or project collaborations.")
 
 def show_about():
     """Display about me section"""
