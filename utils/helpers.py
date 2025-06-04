@@ -188,8 +188,8 @@ SOCIAL_LINKS = {
     "Fiverr": "https://www.fiverr.com/festusbombo",
     "Upwork": "https://www.upwork.com/freelancers/festusbombo", 
     "LinkedIn": "https://linkedin.com/in/festusbombo",
-    "GitHub": "https://github.com/festusbombo",
-    "Email": "mailto:festus.bombo@example.com"
+    "GitHub": "https://github.com/Bombo9",
+    "Email": "mailto:bombomatsitsa@gmail.com"
 }
 
 PROJECT_CATEGORIES = [
